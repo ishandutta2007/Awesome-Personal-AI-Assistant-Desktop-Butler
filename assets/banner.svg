@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c16" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#07090e" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Filters for Glow Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="25" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 900;
+      font-size: 42px;
+      fill: #ffffff;
+      letter-spacing: -1px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 17px;
+      fill: #94a3b8;
+      letter-spacing: 0.2px;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      fill: #e2e8f0;
+    }
+    .code-accent {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 13px;
+      fill: #38bdf8;
+    }
+
+    /* Ambient Pulsing Animations */
+    @keyframes pulseOrb1 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.35; }
+      50% { transform: translate(30px, -20px) scale(1.15); opacity: 0.6; }
+    }
+    @keyframes pulseOrb2 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.25; }
+      50% { transform: translate(-25px, 25px) scale(1.2); opacity: 0.5; }
+    }
+    @keyframes floatCard1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes floatCard2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(7px); }
+    }
+    @keyframes radarScan {
+      0% { stroke-dashoffset: 0; transform: rotate(0deg); }
+      100% { stroke-dashoffset: 700; transform: rotate(360deg); }
+    }
+    @keyframes waveDash {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -120; }
+    }
+
+    .orb-1 { animation: pulseOrb1 9s ease-in-out infinite; transform-origin: 200px 80px; }
+    .orb-2 { animation: pulseOrb2 11s ease-in-out infinite; transform-origin: 1000px 280px; }
+    .card-1 { animation: floatCard1 6s ease-in-out infinite; }
+    .card-2 { animation: floatCard2 7s ease-in-out infinite; }
+    .wave-line { stroke-dasharray: 8 6; animation: waveDash 10s linear infinite; }
+  </style>
+
+  <!-- Deep Canvas Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Cyber Grid Background -->
+  <g opacity="0.12" stroke="#64748b" stroke-width="0.8">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Animated Ambient Light Orbs (Background layer) -->
+  <g>
+    <circle class="orb-1" cx="220" cy="90" r="140" fill="#6366f1" filter="url(#softGlow)" />
+    <circle class="orb-2" cx="980" cy="270" r="160" fill="#ec4899" filter="url(#softGlow)" />
+    <circle cx="640" cy="180" r="110" fill="#06b6d4" opacity="0.18" filter="url(#softGlow)" />
+  </g>
+
+  <!-- Dynamic Connecting Data Streams -->
+  <g fill="none" opacity="0.35">
+    <path class="wave-line" d="M 50 310 Q 300 220 580 320 T 1150 260" stroke="#818cf8" stroke-width="2" />
+    <path class="wave-line" d="M 80 50 Q 400 140 700 40 T 1160 110" stroke="#06b6d4" stroke-width="1.5" />
+  </g>
+
+  <!-- Floating Ambient Interactive Cards (Right Side Decorative Graphics) -->
+  <g class="card-1">
+    <rect x="880" y="45" width="260" height="90" rx="12" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2" />
+    <circle cx="910" cy="72" r="12" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1.5" />
+    <text x="910" y="76" font-size="12" text-anchor="middle" fill="#10b981">⚡</text>
+    <text x="932" y="70" class="badge-text" font-weight="700">OS Computer-Use Agent</text>
+    <text x="932" y="87" class="subtitle-text" font-size="11">Autonomous GUI &amp; Shell Action</text>
+    <rect x="900" y="105" width="80" height="16" rx="4" fill="#334155" />
+    <text x="940" y="117" font-size="10" text-anchor="middle" fill="#38bdf8">Active Grounding</text>
+    <rect x="990" y="105" width="70" height="16" rx="4" fill="#334155" />
+    <text x="1025" y="117" font-size="10" text-anchor="middle" fill="#a7f3d0">240ms Latency</text>
+  </g>
+
+  <g class="card-2">
+    <rect x="850" y="210" width="290" height="95" rx="12" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2" />
+    <circle cx="880" cy="240" r="12" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6" stroke-width="1.5" />
+    <text x="880" y="244" font-size="12" text-anchor="middle" fill="#8b5cf6">🧠</text>
+    <text x="902" y="238" class="badge-text" font-weight="700">Continuous Screen &amp; Audio Recall</text>
+    <text x="902" y="255" class="subtitle-text" font-size="11">Local OCR, Whisper &amp; Vector Memory</text>
+    <rect x="870" y="274" width="75" height="16" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8" />
+    <text x="907" y="286" font-size="10" text-anchor="middle" fill="#c7d2fe">100% Private</text>
+    <rect x="955" y="274" width="85" height="16" rx="4" fill="#334155" />
+    <text x="997" y="286" font-size="10" text-anchor="middle" fill="#e2e8f0">SQLite Indexed</text>
+  </g>
+
+  <!-- Foreground Title and Core Content Area (Crystal-Clear Visibility) -->
+  <g transform="translate(60, 50)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="250" height="28" rx="14" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2" />
+    <circle cx="14" cy="14" r="5" fill="#22c55e" />
+    <text x="26" y="18" class="badge-text" fill="#c7d2fe" font-size="11" letter-spacing="0.5">CURATED ECOSYSTEM • 2026</text>
+
+    <!-- Main Foreground Title -->
+    <text x="0" y="78" class="title-text">
+      Awesome Personal AI Assistant
+    </text>
+    <text x="0" y="125" class="title-text" fill="url(#primaryGrad)">
+      &amp; Desktop Butler 🤖
+    </text>
+
+    <!-- Subtitle Description -->
+    <text x="0" y="170" class="subtitle-text">
+      The definitive directory of always-on AI butlers, autonomous OS computer-use agents,
+    </text>
+    <text x="0" y="196" class="subtitle-text">
+      24/7 screen &amp; audio memory recall engines, keyboard launchers, and local Jarvis systems.
+    </text>
+
+    <!-- Feature Pillars / Category Badges -->
+    <g transform="translate(0, 224)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="165" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="12" y="20" class="badge-text">🖥️ Computer-Use Agents</text>
+
+      <!-- Pill 2 -->
+      <rect x="175" y="0" width="160" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="187" y="20" class="badge-text">🎙️ Screen &amp; Audio Recall</text>
+
+      <!-- Pill 3 -->
+      <rect x="345" y="0" width="155" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="357" y="20" class="badge-text">⚡ Local Voice Butlers</text>
+
+      <!-- Pill 4 -->
+      <rect x="510" y="0" width="150" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="522" y="20" class="badge-text">🔒 Offline &amp; Private</text>
+    </g>
+  </g>
+</svg>
