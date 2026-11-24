@@ -23,6 +23,8 @@
   - [⭐ Top Tier Star Rankings](#-top-tier-star-rankings)
   - [🛠️ Deep-Dive Open Source Profiles](#️-deep-dive-open-source-profiles)
 - [🧩 Architectural Blueprint: Building a Sovereign Butler](#-architectural-blueprint-building-a-sovereign-butler)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
 - [🤝 How to Contribute](#-how-to-contribute)
 - [🛡️ Security & Privacy Disclaimer](#️-security--privacy-disclaimer)
 
@@ -135,6 +137,23 @@ Want to assemble a completely local, private Jarvis-style desktop butler? You ca
 3. **Inference Server:** Host your LLM of choice (Llama 3.3, Qwen 2.5, or Mistral) locally via **Ollama** or **LocalAI**.
 4. **Execution Layer:** Bind **Open Interpreter** for terminal commands and **Browser-Use** for web interactions.
 5. **Hotkey Interface:** Wire commands to global keyboard shortcuts via **Flow Launcher** (Windows), **Raycast / Alfred** (macOS), or **Vicinae** (Linux).
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you so much for exploring and supporting this curated project! If you find this repository valuable for discovering tools, researching personal AI assistants, or building autonomous desktop butlers, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it and track new releases.
+- 🍴 **Fork it** to customize your personal stack and contribute back.
+- 📢 **Share it** with friends, colleagues, and AI communities on X, Reddit, and Discord.
+- ☕ **Buy me a coffee / Sponsor**: Support ongoing maintenance and curation directly on the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+##  Star History
+#[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Personal-AI-Assistant-Desktop-Butler&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Personal-AI-Assistant-Desktop-Butler&type=date&legend=top-left)
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Personal-AI-Assistant-Desktop-Butler&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Personal-AI-Assistant-Desktop-Butler&type=date&legend=top-left)
 
 ---
 
